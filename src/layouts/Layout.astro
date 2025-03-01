@@ -1,0 +1,138 @@
+---
+import Footer from "../components/Footer.astro"
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
+		<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+		rel="stylesheet"
+	  />
+	
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio | Arya Dwi Pradana</title>
+	</head>
+	<body style="font-family: Poppins;" class="bg-white dark:bg-blackone">
+		<nav
+      class="w-full flex-col fixed top-0 bg-white dark:bg-blackone px-4 shadow-md z-10 py-4"
+    >
+      <div class="justify-between flex w-full z-20">
+        <div id="logo" class="flex flex-row w-full gap-4 my-auto items-center ">
+          <a href="/" class="text-nowrap flex items-center">
+            <div 
+              style="
+                width: 50px;
+                height: 50px;
+                background-size: cover;
+                background-position: center;
+              "
+              class="toggle bg-[url(/img/logo2.png)] dark:bg-[url(/img/logo-white.png)] rounded-full p-0 transition-all duration-800 ease-in"
+            ></div>
+            <h1
+              id="title"
+              class="toggle text-blackone dark:text-white font-semibold text-sm md:text-xl text-wrap transition-all duration-800 ease-in-out"
+            >
+              Arya Dwi Pradana
+            </h1>
+          </a>
+        </div>
+        <div
+          id="navbar-menu"
+          class="toggle hidden z-30 md:z-0 flex-col w-full md:pr-12 pr-0 md:flex md:flex-row md:w-auto justify-center items-center "
+        >
+          <ul
+            class="flex flex-col pt-4 md:pt-0 mx-auto gap-4 w-full items-center md:flex-row"
+          >
+            <li class="list-none text-darkgray ">
+              <a
+                href="/project"
+                class="mx-2 block  hover:text-blackone hover:scale-110 dark:hover:text-white transition delay-150"
+                >Project</a
+              >
+            </li>
+            <li class="list-none text-darkgray">
+              <a
+                href="/certificate"
+                class="mx-2 block hover:text-blackone hover:scale-110 dark:hover:text-white transition delay-150"
+                >Certificate</a
+              >
+            </li>
+            <li class="list-none text-darkgray">
+              <a
+                href="#"
+                class="mx-2 block hover:text-blackone hover:scale-110 dark:hover:text-white transition delay-150"
+                >About</a
+              >
+            </li>
+            <button
+              class="mx-2 bg-blackone dark:bg-darkgray dark:hover:bg-younggray hover:bg-darkgray text-nowrap text-white text-sm py-2 font-bold px-16 md:px-8 rounded-3xl transition delay-75 hover:scale-110"
+            >
+              Get in Touch
+            </button>
+          </ul>
+        </div>
+
+        <div dir="rtl" id="hamburger" class="flex md:mx-0 z-50 max-[359px]:w-auto w-auto items-center ">
+          <div class="md:hidden p-2 flex mr-2 max-[359px]:mr-2 max-[330px]:mr-1 fixed items-center">
+            <button
+              data-collapse-toggle="navbar-default"
+              type="button"
+              class="inline-flex fixed mr-6 items-center p-2 w-10 h-10 text-sm bg-white dark:bg-blackone rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-1 focus:ring-white dark:text-darkgray dark:hover:bg-darkgray"
+              aria-controls="navbar-default"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5 text-darkgray dark:text-white"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none" 
+                viewbox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <a id="sun"
+          class="sun toggle inline-flex fixed md:flex z-50"
+            ><i
+              class="fa-2xl fa-regular fa-sun w-full h-full cursor-pointer text-white "
+            ></i
+          ></a>
+          <a id="moon"
+          class="moon toggle inline-flex fixed md:flex z-50"
+            ><i
+              class="fa-2xl fa-regular fa-moon w-full h-full cursor-pointer text-blackone"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+	<div class="w-full flex z-0 pt-12 md:pt-18">
+		<slot />
+    
+	</div>
+  <Footer/>
+	</body>
+</html>
+
+<style>
+	@font-face {
+  font-family: 'Poppins';
+  src: url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  font-weight: lighter;
+  font-style: normal;
+}
+</style>
+
+<script src="/js/darkmode.js" defer></script>
+<script src="/js/app.js" defer></script>

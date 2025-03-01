@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  --font-inter: "Poppins";
+  --font-weight-thin: ;
+  --color-blackone: #242424;
+  --color-darkgray: #666666;
+  --color-younggray: #cccccc;
+}
+@custom-variant dark (&:where(.dark, .dark *));
+
+.display-none {
+  @apply hidden;
+}
