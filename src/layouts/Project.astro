@@ -1,13 +1,12 @@
 ---
-import ProjectOne from "../components/Project_1.astro"
-import ProjectTwo from "../components/Project_2.astro"
-import ProjectThree from "../components/Project_3.astro"
+import ProjectOne from "../components/Project_bwa.astro"
+import ProjectTwo from "../components/Project_tripin.astro"
 ---
 
 <div class="w-full">
     <div class="flex flex-col justify-center mx-auto items-center">
       <img
-        src="./img/bg.png"
+        src="../img/bg.png"
         alt=""
         class="rounded-2xl z-0 bg-cover min-h-24 object-scale-down transition-all ease-in delay-500"
       />
@@ -28,7 +27,7 @@ import ProjectThree from "../components/Project_3.astro"
             Project
           </h1>
           <h2
-            class="lg:text-xl text-start text-lg text-nowrap max-[311px]:text-wrap text-blackone dark:text-white"
+            class="lg:text-xl text-center md:text-start text-lg text-nowrap max-[311px]:text-wrap text-blackone dark:text-white"
           >
             My Featured Project
           </h2>
@@ -44,7 +43,6 @@ import ProjectThree from "../components/Project_3.astro"
         ></div>
         <ProjectOne/>
         <ProjectTwo/>
-        <ProjectThree/>
     </div>
     </div>
   </div>
